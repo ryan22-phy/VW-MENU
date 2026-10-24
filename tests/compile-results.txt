@@ -1,0 +1,6 @@
+Official Luau compiler v0.740
+Files: 11
+Exit code: 0
+Compiled 2 KLOC into 105 KB bytecode (read 0.00s, parse 0.00s, compile 0.00s)
+
+Only independent code/tests compiled. No reference sample compiled.

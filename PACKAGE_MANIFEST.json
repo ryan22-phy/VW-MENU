@@ -1,0 +1,222 @@
+[
+  {
+    "path": "analysis/evidence/lumin-loader-direct.body",
+    "bytes": 291684,
+    "sha256": "aecbc6c2561acd12bb37ca5692ff42c39b65e603d73c9019746d1d4611ebc402"
+  },
+  {
+    "path": "analysis/evidence/lumin-loader-direct.metadata.json",
+    "bytes": 1747,
+    "sha256": "87ca78c955adbdca06a3bc0546621fbc165e73ca7693718f53b40a607079e7f7"
+  },
+  {
+    "path": "analysis/evidence/lumin-loader-http.metadata.json",
+    "bytes": 278,
+    "sha256": "35c096a5d1ea213bf7b30ca408d149690db986789a80eba08f4d018cc5dd0805"
+  },
+  {
+    "path": "analysis/evidence/manifest-sha256.json",
+    "bytes": 1937,
+    "sha256": "3f2b3ca28e77a072d24a18e8355bd967317a8c54a4c2186979321caff02b3f51"
+  },
+  {
+    "path": "analysis/evidence/scriptblox-raw-direct.body",
+    "bytes": 59,
+    "sha256": "da0393d9129e697ede95a56103d2e30bc329c499ef9e9e87396c2af2b5752970"
+  },
+  {
+    "path": "analysis/evidence/scriptblox-raw-direct.metadata.json",
+    "bytes": 2252,
+    "sha256": "8eef50e4adcb97a0e6a28143dd738bfcb46af61f8890c713bfb3c5f9ed0fc9ad"
+  },
+  {
+    "path": "analysis/evidence/scriptblox-raw.metadata.json",
+    "bytes": 306,
+    "sha256": "d45d48dc3c91abe6c5d6a801c452fc340daf917de9d00070728e86dff7938121"
+  },
+  {
+    "path": "analysis/evidence/static-lexical-summary.json",
+    "bytes": 19196,
+    "sha256": "9216e174de38bf25ed3221d6693c995b5f747782b300828403bb4ebaa1bb06ad"
+  },
+  {
+    "path": "analysis/evidence/verification-results.json",
+    "bytes": 314,
+    "sha256": "1a09393a40ce50cd213efed9979ab49e79ee0ea44591adb470452a2f3426fb71"
+  },
+  {
+    "path": "analysis/evidence/web-observations.json",
+    "bytes": 2607,
+    "sha256": "86f4879447c2c83da4ce2bdea9628f1fd245acdaa049b349983b8c93a920a3d1"
+  },
+  {
+    "path": "analysis/FUNCTION_INVENTORY.md",
+    "bytes": 4782,
+    "sha256": "01c9a8492d039ea2705162b6689203eea1fe0a1e448eb299f4c04994162a4a44"
+  },
+  {
+    "path": "analysis/REA_REPORT.md",
+    "bytes": 9190,
+    "sha256": "57f46892689fc8103dad772b4e80bddd92e7ca47a589b5a079781dea61879765"
+  },
+  {
+    "path": "analysis/tools/static_scan.py",
+    "bytes": 6099,
+    "sha256": "686ca540daf3f2c3ed53e54546dcf37d7a38d958560ff1e22a566cde0754b415"
+  },
+  {
+    "path": "analysis/tools/verify_evidence.py",
+    "bytes": 2609,
+    "sha256": "b835de6dd671898d00f13e8ae7315e9328e8e6145a35af9b1ef6c0836c0be954"
+  },
+  {
+    "path": "design/DESIGN.md",
+    "bytes": 1562,
+    "sha256": "3a8dc79e1fe3825c4e1ef163eff5242420a09271962ec9b487894b71572286cb"
+  },
+  {
+    "path": "design/features/vw-menu/design.md",
+    "bytes": 892,
+    "sha256": "0db71a301e9cfc8e46d0b7b977c2624cc2df66f4b1af1de0e77153639e88e836"
+  },
+  {
+    "path": "IMPLEMENTATION_PLAN.md",
+    "bytes": 1190,
+    "sha256": "4d143895afaa221f4480d6bcc0a0b3c438e41b0fba46784d49ea33eb981539e2"
+  },
+  {
+    "path": "README.md",
+    "bytes": 7326,
+    "sha256": "ebed12af4e7e70e84e448e0fb55d8af90f3a1e819832bfb953ec9c589ec31a54"
+  },
+  {
+    "path": "src/Bootstrap.client.lua",
+    "bytes": 287,
+    "sha256": "e70bbe589f96043bfd5fb073b50555d8e633bd66708186ef566d21e360e7c5be"
+  },
+  {
+    "path": "src/CleanupManager.lua",
+    "bytes": 2018,
+    "sha256": "6cc2d25748b9732c81368e7fc73d86936c016b5fc14f018834a71a5d7731bdd8"
+  },
+  {
+    "path": "src/FeatureController.lua",
+    "bytes": 4421,
+    "sha256": "212a7e5fac46f439dc187c06486bee76f7df85551eac963db641458668f9d3a5"
+  },
+  {
+    "path": "src/FeatureRegistry.lua",
+    "bytes": 3530,
+    "sha256": "ed6fab901df83e30ce3a2d9d5d4aced4a3bcb91361d551840da9cf24f1c9c4fe"
+  },
+  {
+    "path": "src/Main.lua",
+    "bytes": 5634,
+    "sha256": "4e5ec648dc3e24e536d35e23d3d0a542c90220bf26da38af0787805adeef1117"
+  },
+  {
+    "path": "src/NotificationManager.lua",
+    "bytes": 5147,
+    "sha256": "233301d6fea166cef82dee8b73e33d6d9bc0c95ac7037ac35ba762238fb4c523"
+  },
+  {
+    "path": "src/SettingsManager.lua",
+    "bytes": 3350,
+    "sha256": "74206b17661c3aa775f7ba4ca42a7953f500ca76f8eb6b0d455df61067ee5ad5"
+  },
+  {
+    "path": "src/UIController.lua",
+    "bytes": 25960,
+    "sha256": "71438809215b17b566e31953351958be7848c813c2a27923c3112ebfdd576df3"
+  },
+  {
+    "path": "tests/CODE_REVIEW.md",
+    "bytes": 6019,
+    "sha256": "7665b02026e99d6543c115b58c5ad67f0272c6d7a1a0553f3b006e7508f87b39"
+  },
+  {
+    "path": "tests/compile-results.txt",
+    "bytes": 206,
+    "sha256": "85312d95725a5bcad9e0075984e98d8e3878bdef5a10e14485d541cf6026d565"
+  },
+  {
+    "path": "tests/FeatureController.spec.lua",
+    "bytes": 1732,
+    "sha256": "bcd8baac702907fbdc4a4bec2677a1ab613741236a8520736be34225a4499391"
+  },
+  {
+    "path": "tests/final-validation.json",
+    "bytes": 3401,
+    "sha256": "5fa8563b1306717fb22f98af70705747116b5d20009de4184edf5e2681e57712"
+  },
+  {
+    "path": "tests/font-regression-red.txt",
+    "bytes": 1985,
+    "sha256": "f06020228c3a5dc1d23dea2cb649d1c981533a599911197558eaa9d1f94ebd0f"
+  },
+  {
+    "path": "tests/isolated_tests.py",
+    "bytes": 9477,
+    "sha256": "bf0a45584caaf8f5e680ac8c18a248519159943b023ef0a4d0ea3b1dccd3bb5d"
+  },
+  {
+    "path": "tests/main-integration-results.txt",
+    "bytes": 847,
+    "sha256": "887f9dd0821574fd52d3bac8aeb23d0b8bf2e7e72c8ebf8039c745d37bca3c83"
+  },
+  {
+    "path": "tests/main_integration_tests.py",
+    "bytes": 16415,
+    "sha256": "21152c401c4164a53559bcbf4750e5954ce1810bdd5f581f786dde9bf7658e47"
+  },
+  {
+    "path": "tests/package-results.json",
+    "bytes": 1807,
+    "sha256": "1b12175161aae284318fd67241e8352ea47e35b58e0234f98931a432bcb5bfbf"
+  },
+  {
+    "path": "tests/STUDIO_CHECKLIST.md",
+    "bytes": 3147,
+    "sha256": "cc9958edc2b1c6f83b94b6879dce2bce483538b02b765da62ce7eea852e34098"
+  },
+  {
+    "path": "tests/support-results.txt",
+    "bytes": 1313,
+    "sha256": "9d77a1fcb768c209201f54d6b50b95166d1601dc53b5b2cf58f009b8d6cfb2a3"
+  },
+  {
+    "path": "tests/Support.spec.lua",
+    "bytes": 5134,
+    "sha256": "c1ef776d64e48f1b6f7dcc33ff33c8492fcd7dd74f1da81b62b91cdb92ec43c1"
+  },
+  {
+    "path": "tests/TEST_RESULTS.md",
+    "bytes": 4824,
+    "sha256": "9bd5ca75ee2038accf39ac97921394a0a11d9e602b84d96e9cad7f746517a576"
+  },
+  {
+    "path": "tools/build.py",
+    "bytes": 2581,
+    "sha256": "f148f5fc56d43d754a7a430a576d275e44de2c89fdaa197dc0cc514c9f9a6d16"
+  },
+  {
+    "path": "tools/validate.py",
+    "bytes": 3165,
+    "sha256": "2b5e04abc7a99d52ca8036773f63dc718be6f9a679266fa532d119fe13f6ad56"
+  },
+  {
+    "path": "tools/verify_package.py",
+    "bytes": 2797,
+    "sha256": "a98ca7df82f7e490a933f9d014dbb82a20b68dfc0ccef5066e73b4476a2df202"
+  },
+  {
+    "path": "VW_MENU.lua",
+    "bytes": 52010,
+    "sha256": "c99a1345c67180a157883ca00e2bfc39d82ece14ee2e68a92637466b699f14fd"
+  },
+  {
+    "path": "VW_MENU.rbxmx",
+    "bytes": 53178,
+    "sha256": "8488814f1c4b23a53208a9c270f92059cff526455146b9d24b38cf7fe425852f"
+  }
+]

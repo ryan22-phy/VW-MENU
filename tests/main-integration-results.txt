@@ -1,0 +1,11 @@
+VW MENU — Main integration tests with explicit local adapters
+Runtime: C:\Users\franc\Documents\Codex\2026-10-24\new-chat\work\luau-toolchain\bin\luau.exe (caller-supplied official Luau CLI)
+Real modules: Main, FeatureRegistry, FeatureController, SettingsManager, CleanupManager.
+Replaced modules: UIController and NotificationManager; neither renders or processes input.
+Environment: local Instances, attributes, synchronous Destroying/BindableFunction and signals.
+Connection assertions cover adapter and Main ownership, not real Roblox event delivery.
+Not a Roblox Studio run; rendering, input, scheduling, replication, device compatibility
+and actual memory usage were not validated. No original Lumin Hub code was executed.
+Exit code: 0
+
+VW MENU Main integration: 75 assertions passed (explicit adapters and local signal stubs).

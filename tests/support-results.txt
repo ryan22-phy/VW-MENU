@@ -1,0 +1,16 @@
+VW MENU — isolated logic tests
+Runtime: C:\Users\franc\Documents\Codex\2026-10-24\new-chat\work\luau-toolchain\bin\luau.exe (caller-supplied Luau CLI)
+Environment: local Instance/Folder/attribute/connection, tween and timer stubs.
+Not a Roblox Studio run. Rendering, input, scheduling, replication, device compatibility
+and actual memory usage were not validated. Expected protected errors are deliberate.
+Font uses an audited whitelist; other enum/property stubs do not validate all Roblox APIs.
+A previous generic Font stub accepted GothamSemibold, an invalid Roblox enum; regression added.
+Notification timers are guarded, not cancelled in the scheduler; closures live for at most 15s.
+No original Lumin Hub code is loaded or executed.
+Exit code: 0
+
+Protected error expected by test:	[VW MENU] Cleanup failed: C:/Users/franc/Documents/Codex/2026-10-24/new-chat/work/test-runs/vw-menu-isolated-qif9tglo/isolated_runner.luau:581: Intentional cleanup failure used by Support.spec
+VW MENU support: 43 assertions passed.
+Protected error expected by test:	[VW MENU] broken: C:/Users/franc/Documents/Codex/2026-10-24/new-chat/work/test-runs/vw-menu-isolated-qif9tglo/isolated_runner.luau:664: expected test error
+FeatureController: PASS
+VW MENU notifications: 14 assertions passed (isolated stubs).

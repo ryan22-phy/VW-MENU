@@ -1,0 +1,768 @@
+{
+  "method": "non_executing_Lua_lexical_scan_not_a_parser_or_VM_decoder",
+  "source": "lumin-loader-direct.body",
+  "source_sha256": "aecbc6c2561acd12bb37ca5692ff42c39b65e603d73c9019746d1d4611ebc402",
+  "source_bytes": 291684,
+  "source_lines": 3,
+  "comments": [
+    {
+      "offset_zero_based": 0,
+      "line_one_based": 1,
+      "column_one_based": 1,
+      "length": 75,
+      "content": " This file was protected using Luraph Obfuscator v14.9 [https://lura.ph/]"
+    }
+  ],
+  "string_count": 26,
+  "strings": [
+    {
+      "offset_zero_based": 1130,
+      "line_one_based": 3,
+      "column_one_based": 1054,
+      "length": 25,
+      "kind": "quoted",
+      "decoded_length": 7,
+      "raw": "\"r\\101ad\\x66\\054\\u{0034}\"",
+      "decoded": "readf64",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 30213,
+      "line_one_based": 3,
+      "column_one_based": 30137,
+      "length": 18,
+      "kind": "quoted",
+      "decoded_length": 6,
+      "raw": "\"str\\105n\\z  \\x67\"",
+      "decoded": "string",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 30280,
+      "line_one_based": 3,
+      "column_one_based": 30204,
+      "length": 30,
+      "kind": "quoted",
+      "decoded_length": 11,
+      "raw": "\"\\u{3A}(\\37d+\\41\\x5B:\\x0D\\10]\"",
+      "decoded": ":(%d+)[:\r\n]",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 30353,
+      "line_one_based": 3,
+      "column_one_based": 30277,
+      "length": 34,
+      "kind": "quoted",
+      "decoded_length": 15,
+      "raw": "'\\76u\\x72ap\\x68\\x20Scr\\i\\x70\\116:'",
+      "decoded": "Luraph Scr\\ipt:",
+      "unknown_escape_sequences": [
+        "\\i"
+      ]
+    },
+    {
+      "offset_zero_based": 30396,
+      "line_one_based": 3,
+      "column_one_based": 30320,
+      "length": 30,
+      "kind": "quoted",
+      "decoded_length": 10,
+      "raw": "\"\\u{0028}int\\z\\101\\x72\\110al)\"",
+      "decoded": "(internal)",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 30429,
+      "line_one_based": 3,
+      "column_one_based": 30353,
+      "length": 13,
+      "kind": "quoted",
+      "decoded_length": 2,
+      "raw": "'\\u{003A}\\32'",
+      "decoded": ": ",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 30648,
+      "line_one_based": 3,
+      "column_one_based": 30572,
+      "length": 3,
+      "kind": "quoted",
+      "decoded_length": 1,
+      "raw": "\"#\"",
+      "decoded": "#",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 43881,
+      "line_one_based": 3,
+      "column_one_based": 43805,
+      "length": 65,
+      "kind": "quoted",
+      "decoded_length": 19,
+      "raw": "'\\z  V\\x69\\u{072}\\u{074}ua\\x6CIn\\112\\z u\\z t\\77\\x61\\u{06E}ag\\zer'",
+      "decoded": "VirtualInputManager",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 43952,
+      "line_one_based": 3,
+      "column_one_based": 43876,
+      "length": 43,
+      "kind": "quoted",
+      "decoded_length": 11,
+      "raw": "\"\\u{56}i\\u{0072}tu\\97\\z\\u{006C}\\85\\zs\\x65r\"",
+      "decoded": "VirtualUser",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 46539,
+      "line_one_based": 3,
+      "column_one_based": 46463,
+      "length": 20,
+      "kind": "quoted",
+      "decoded_length": 9,
+      "raw": "\"\\wri\\116e\\z u\\0512\"",
+      "decoded": "\\writeu32",
+      "unknown_escape_sequences": [
+        "\\w"
+      ]
+    },
+    {
+      "offset_zero_based": 46644,
+      "line_one_based": 3,
+      "column_one_based": 46568,
+      "length": 19,
+      "kind": "quoted",
+      "decoded_length": 8,
+      "raw": "\"f\\z \\x75nc\\x74ion\"",
+      "decoded": "function",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 46680,
+      "line_one_based": 3,
+      "column_one_based": 46604,
+      "length": 3,
+      "kind": "quoted",
+      "decoded_length": 1,
+      "raw": "\"n\"",
+      "decoded": "n",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 46686,
+      "line_one_based": 3,
+      "column_one_based": 46610,
+      "length": 4,
+      "kind": "quoted",
+      "decoded_length": 2,
+      "raw": "'\\p'",
+      "decoded": "\\p",
+      "unknown_escape_sequences": [
+        "\\p"
+      ]
+    },
+    {
+      "offset_zero_based": 47063,
+      "line_one_based": 3,
+      "column_one_based": 46987,
+      "length": 22,
+      "kind": "quoted",
+      "decoded_length": 7,
+      "raw": "\"r\\101ad\\102\\z  \\0512\"",
+      "decoded": "readf32",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 48241,
+      "line_one_based": 3,
+      "column_one_based": 48165,
+      "length": 20,
+      "kind": "quoted",
+      "decoded_length": 7,
+      "raw": "'re\\x61\\u{064}u1\\z6'",
+      "decoded": "readu16",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 48570,
+      "line_one_based": 3,
+      "column_one_based": 48494,
+      "length": 229536,
+      "kind": "long_bracket",
+      "content_length": 229528
+    },
+    {
+      "offset_zero_based": 279655,
+      "line_one_based": 3,
+      "column_one_based": 279579,
+      "length": 30,
+      "kind": "quoted",
+      "decoded_length": 8,
+      "raw": "\"\\102u\\u{006E}c\\z  \\116\\105on\"",
+      "decoded": "function",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 279707,
+      "line_one_based": 3,
+      "column_one_based": 279631,
+      "length": 18,
+      "kind": "quoted",
+      "decoded_length": 8,
+      "raw": "'f\\zunct\\z \\x69on'",
+      "decoded": "function",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 279755,
+      "line_one_based": 3,
+      "column_one_based": 279679,
+      "length": 28,
+      "kind": "quoted",
+      "decoded_length": 8,
+      "raw": "'\\102\\117n\\u{063}ti\\x6F\\110'",
+      "decoded": "function",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 279851,
+      "line_one_based": 3,
+      "column_one_based": 279775,
+      "length": 17,
+      "kind": "quoted",
+      "decoded_length": 5,
+      "raw": "'t\\u{0061}bl\\101'",
+      "decoded": "table",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 279965,
+      "line_one_based": 3,
+      "column_one_based": 279889,
+      "length": 14,
+      "kind": "quoted",
+      "decoded_length": 6,
+      "raw": "'th\\114\\x65ad'",
+      "decoded": "thread",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 280004,
+      "line_one_based": 3,
+      "column_one_based": 279928,
+      "length": 18,
+      "kind": "quoted",
+      "decoded_length": 4,
+      "raw": "\"\\100\\u{065}a\\100\"",
+      "decoded": "dead",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 280592,
+      "line_one_based": 3,
+      "column_one_based": 280516,
+      "length": 6,
+      "kind": "quoted",
+      "decoded_length": 1,
+      "raw": "\"\\x7A\"",
+      "decoded": "z",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 280599,
+      "line_one_based": 3,
+      "column_one_based": 280523,
+      "length": 7,
+      "kind": "quoted",
+      "decoded_length": 5,
+      "raw": "'!!!!!'",
+      "decoded": "!!!!!",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 285409,
+      "line_one_based": 3,
+      "column_one_based": 285333,
+      "length": 23,
+      "kind": "quoted",
+      "decoded_length": 7,
+      "raw": "\"rea\\z \\x64\\117\\051\\50\"",
+      "decoded": "readu32",
+      "unknown_escape_sequences": []
+    },
+    {
+      "offset_zero_based": 288938,
+      "line_one_based": 3,
+      "column_one_based": 288862,
+      "length": 11,
+      "kind": "quoted",
+      "decoded_length": 4,
+      "raw": "\"\\99op\\121\"",
+      "decoded": "copy",
+      "unknown_escape_sequences": []
+    }
+  ],
+  "visible_token_occurrences": {
+    "HttpGet": [],
+    "LocalPlayer": [],
+    "Players": [],
+    "bit32": [
+      {
+        "name": "bit32",
+        "offset_zero_based": 970,
+        "line_one_based": 3,
+        "column_one_based": 894
+      },
+      {
+        "name": "bit32",
+        "offset_zero_based": 30572,
+        "line_one_based": 3,
+        "column_one_based": 30496
+      },
+      {
+        "name": "bit32",
+        "offset_zero_based": 41554,
+        "line_one_based": 3,
+        "column_one_based": 41478
+      },
+      {
+        "name": "bit32",
+        "offset_zero_based": 41566,
+        "line_one_based": 3,
+        "column_one_based": 41490
+      },
+      {
+        "name": "bit32",
+        "offset_zero_based": 42257,
+        "line_one_based": 3,
+        "column_one_based": 42181
+      },
+      {
+        "name": "bit32",
+        "offset_zero_based": 46801,
+        "line_one_based": 3,
+        "column_one_based": 46725
+      },
+      {
+        "name": "bit32",
+        "offset_zero_based": 47047,
+        "line_one_based": 3,
+        "column_one_based": 46971
+      },
+      {
+        "name": "bit32",
+        "offset_zero_based": 48558,
+        "line_one_based": 3,
+        "column_one_based": 48482
+      },
+      {
+        "name": "bit32",
+        "offset_zero_based": 278802,
+        "line_one_based": 3,
+        "column_one_based": 278726
+      },
+      {
+        "name": "bit32",
+        "offset_zero_based": 281033,
+        "line_one_based": 3,
+        "column_one_based": 280957
+      },
+      {
+        "name": "bit32",
+        "offset_zero_based": 281801,
+        "line_one_based": 3,
+        "column_one_based": 281725
+      },
+      {
+        "name": "bit32",
+        "offset_zero_based": 284415,
+        "line_one_based": 3,
+        "column_one_based": 284339
+      },
+      {
+        "name": "bit32",
+        "offset_zero_based": 286048,
+        "line_one_based": 3,
+        "column_one_based": 285972
+      },
+      {
+        "name": "bit32",
+        "offset_zero_based": 288922,
+        "line_one_based": 3,
+        "column_one_based": 288846
+      },
+      {
+        "name": "bit32",
+        "offset_zero_based": 291123,
+        "line_one_based": 3,
+        "column_one_based": 291047
+      },
+      {
+        "name": "bit32",
+        "offset_zero_based": 291216,
+        "line_one_based": 3,
+        "column_one_based": 291140
+      },
+      {
+        "name": "bit32",
+        "offset_zero_based": 291465,
+        "line_one_based": 3,
+        "column_one_based": 291389
+      }
+    ],
+    "buffer": [
+      {
+        "name": "buffer",
+        "offset_zero_based": 32434,
+        "line_one_based": 3,
+        "column_one_based": 32358
+      }
+    ],
+    "coroutine": [
+      {
+        "name": "coroutine",
+        "offset_zero_based": 279587,
+        "line_one_based": 3,
+        "column_one_based": 279511
+      },
+      {
+        "name": "coroutine",
+        "offset_zero_based": 279983,
+        "line_one_based": 3,
+        "column_one_based": 279907
+      },
+      {
+        "name": "coroutine",
+        "offset_zero_based": 280093,
+        "line_one_based": 3,
+        "column_one_based": 280017
+      },
+      {
+        "name": "coroutine",
+        "offset_zero_based": 284296,
+        "line_one_based": 3,
+        "column_one_based": 284220
+      }
+    ],
+    "debug": [
+      {
+        "name": "debug",
+        "offset_zero_based": 46667,
+        "line_one_based": 3,
+        "column_one_based": 46591
+      }
+    ],
+    "game": [],
+    "getfenv": [
+      {
+        "name": "getfenv",
+        "offset_zero_based": 32680,
+        "line_one_based": 3,
+        "column_one_based": 32604
+      }
+    ],
+    "getgenv": [],
+    "getrenv": [],
+    "http_request": [],
+    "isfile": [],
+    "loadstring": [],
+    "math": [],
+    "newproxy": [],
+    "readfile": [],
+    "request": [],
+    "select": [
+      {
+        "name": "select",
+        "offset_zero_based": 40471,
+        "line_one_based": 3,
+        "column_one_based": 40395
+      }
+    ],
+    "setclipboard": [],
+    "setfenv": [
+      {
+        "name": "setfenv",
+        "offset_zero_based": 288866,
+        "line_one_based": 3,
+        "column_one_based": 288790
+      }
+    ],
+    "string": [
+      {
+        "name": "string",
+        "offset_zero_based": 425,
+        "line_one_based": 3,
+        "column_one_based": 349
+      },
+      {
+        "name": "string",
+        "offset_zero_based": 30786,
+        "line_one_based": 3,
+        "column_one_based": 30710
+      },
+      {
+        "name": "string",
+        "offset_zero_based": 34140,
+        "line_one_based": 3,
+        "column_one_based": 34064
+      },
+      {
+        "name": "string",
+        "offset_zero_based": 281814,
+        "line_one_based": 3,
+        "column_one_based": 281738
+      },
+      {
+        "name": "string",
+        "offset_zero_based": 288953,
+        "line_one_based": 3,
+        "column_one_based": 288877
+      }
+    ],
+    "syn": [],
+    "table": [
+      {
+        "name": "table",
+        "offset_zero_based": 44053,
+        "line_one_based": 3,
+        "column_one_based": 43977
+      },
+      {
+        "name": "table",
+        "offset_zero_based": 284402,
+        "line_one_based": 3,
+        "column_one_based": 284326
+      }
+    ],
+    "task": [
+      {
+        "name": "task",
+        "offset_zero_based": 46702,
+        "line_one_based": 3,
+        "column_one_based": 46626
+      }
+    ],
+    "unpack": [
+      {
+        "name": "unpack",
+        "offset_zero_based": 33626,
+        "line_one_based": 3,
+        "column_one_based": 33550
+      },
+      {
+        "name": "unpack",
+        "offset_zero_based": 42746,
+        "line_one_based": 3,
+        "column_one_based": 42670
+      }
+    ],
+    "writefile": []
+  },
+  "visible_aliases": [
+    {
+      "alias": "m",
+      "target": "string.match",
+      "offset_zero_based": 423,
+      "line_one_based": 3,
+      "column_one_based": 347
+    },
+    {
+      "alias": "Uw",
+      "target": "bit32.rrotate",
+      "offset_zero_based": 967,
+      "line_one_based": 3,
+      "column_one_based": 891
+    },
+    {
+      "alias": "T",
+      "target": "bit32.lshift",
+      "offset_zero_based": 30570,
+      "line_one_based": 3,
+      "column_one_based": 30494
+    },
+    {
+      "alias": "L",
+      "target": "string.sub",
+      "offset_zero_based": 30784,
+      "line_one_based": 3,
+      "column_one_based": 30708
+    },
+    {
+      "alias": "u",
+      "target": "unpack",
+      "offset_zero_based": 33624,
+      "line_one_based": 3,
+      "column_one_based": 33548
+    },
+    {
+      "alias": "p",
+      "target": "string.gsub",
+      "offset_zero_based": 34138,
+      "line_one_based": 3,
+      "column_one_based": 34062
+    },
+    {
+      "alias": "f",
+      "target": "bit32.bor",
+      "offset_zero_based": 41552,
+      "line_one_based": 3,
+      "column_one_based": 41476
+    },
+    {
+      "alias": "vw",
+      "target": "bit32.countrz",
+      "offset_zero_based": 42254,
+      "line_one_based": 3,
+      "column_one_based": 42178
+    },
+    {
+      "alias": "W",
+      "target": "unpack",
+      "offset_zero_based": 42744,
+      "line_one_based": 3,
+      "column_one_based": 42668
+    },
+    {
+      "alias": "k",
+      "target": "table.create",
+      "offset_zero_based": 44051,
+      "line_one_based": 3,
+      "column_one_based": 43975
+    },
+    {
+      "alias": "M",
+      "target": "bit32.countrz",
+      "offset_zero_based": 46799,
+      "line_one_based": 3,
+      "column_one_based": 46723
+    },
+    {
+      "alias": "E",
+      "target": "bit32.lrotate",
+      "offset_zero_based": 47045,
+      "line_one_based": 3,
+      "column_one_based": 46969
+    },
+    {
+      "alias": "nw",
+      "target": "bit32.bor",
+      "offset_zero_based": 48555,
+      "line_one_based": 3,
+      "column_one_based": 48479
+    },
+    {
+      "alias": "pw",
+      "target": "bit32.bnot",
+      "offset_zero_based": 278799,
+      "line_one_based": 3,
+      "column_one_based": 278723
+    },
+    {
+      "alias": "S",
+      "target": "coroutine.wrap",
+      "offset_zero_based": 279585,
+      "line_one_based": 3,
+      "column_one_based": 279509
+    },
+    {
+      "alias": "Vw",
+      "target": "bit32.lshift",
+      "offset_zero_based": 281030,
+      "line_one_based": 3,
+      "column_one_based": 280954
+    },
+    {
+      "alias": "kw",
+      "target": "bit32.band",
+      "offset_zero_based": 281798,
+      "line_one_based": 3,
+      "column_one_based": 281722
+    },
+    {
+      "alias": "V",
+      "target": "string.char",
+      "offset_zero_based": 281812,
+      "line_one_based": 3,
+      "column_one_based": 281736
+    },
+    {
+      "alias": "v",
+      "target": "table.move",
+      "offset_zero_based": 284400,
+      "line_one_based": 3,
+      "column_one_based": 284324
+    },
+    {
+      "alias": "Z",
+      "target": "bit32.countlz",
+      "offset_zero_based": 284413,
+      "line_one_based": 3,
+      "column_one_based": 284337
+    },
+    {
+      "alias": "iw",
+      "target": "bit32.countlz",
+      "offset_zero_based": 286045,
+      "line_one_based": 3,
+      "column_one_based": 285969
+    },
+    {
+      "alias": "o",
+      "target": "setfenv",
+      "offset_zero_based": 288864,
+      "line_one_based": 3,
+      "column_one_based": 288788
+    },
+    {
+      "alias": "I",
+      "target": "bit32.rrotate",
+      "offset_zero_based": 288920,
+      "line_one_based": 3,
+      "column_one_based": 288844
+    },
+    {
+      "alias": "ow",
+      "target": "string.byte",
+      "offset_zero_based": 288950,
+      "line_one_based": 3,
+      "column_one_based": 288874
+    },
+    {
+      "alias": "_w",
+      "target": "bit32.bxor",
+      "offset_zero_based": 291120,
+      "line_one_based": 3,
+      "column_one_based": 291044
+    },
+    {
+      "alias": "Sw",
+      "target": "bit32.rshift",
+      "offset_zero_based": 291213,
+      "line_one_based": 3,
+      "column_one_based": 291137
+    },
+    {
+      "alias": "Xw",
+      "target": "bit32.lrotate",
+      "offset_zero_based": 291462,
+      "line_one_based": 3,
+      "column_one_based": 291386
+    }
+  ],
+  "literal_url_candidates": [
+    {
+      "url": "https://lura.ph/",
+      "offset_zero_based": 58,
+      "line_one_based": 1,
+      "column_one_based": 59
+    }
+  ],
+  "limitations": [
+    "Lexical results do not prove call reachability, feature behavior or API validity.",
+    "Unknown escapes are preserved and marked, not treated as recovered text.",
+    "No payload transformation, bytecode unpacking, sample execution, key action or remote module retrieval."
+  ]
+}

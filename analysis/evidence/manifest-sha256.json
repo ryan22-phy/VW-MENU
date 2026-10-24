@@ -1,0 +1,62 @@
+[
+  {
+    "path": "evidence/lumin-loader-direct.body",
+    "bytes": 291684,
+    "sha256": "aecbc6c2561acd12bb37ca5692ff42c39b65e603d73c9019746d1d4611ebc402"
+  },
+  {
+    "path": "evidence/lumin-loader-direct.metadata.json",
+    "bytes": 1747,
+    "sha256": "87ca78c955adbdca06a3bc0546621fbc165e73ca7693718f53b40a607079e7f7"
+  },
+  {
+    "path": "evidence/lumin-loader-http.metadata.json",
+    "bytes": 278,
+    "sha256": "35c096a5d1ea213bf7b30ca408d149690db986789a80eba08f4d018cc5dd0805"
+  },
+  {
+    "path": "evidence/scriptblox-raw-direct.body",
+    "bytes": 59,
+    "sha256": "da0393d9129e697ede95a56103d2e30bc329c499ef9e9e87396c2af2b5752970"
+  },
+  {
+    "path": "evidence/scriptblox-raw-direct.metadata.json",
+    "bytes": 2252,
+    "sha256": "8eef50e4adcb97a0e6a28143dd738bfcb46af61f8890c713bfb3c5f9ed0fc9ad"
+  },
+  {
+    "path": "evidence/scriptblox-raw.metadata.json",
+    "bytes": 306,
+    "sha256": "d45d48dc3c91abe6c5d6a801c452fc340daf917de9d00070728e86dff7938121"
+  },
+  {
+    "path": "evidence/static-lexical-summary.json",
+    "bytes": 19196,
+    "sha256": "9216e174de38bf25ed3221d6693c995b5f747782b300828403bb4ebaa1bb06ad"
+  },
+  {
+    "path": "evidence/web-observations.json",
+    "bytes": 2607,
+    "sha256": "86f4879447c2c83da4ce2bdea9628f1fd245acdaa049b349983b8c93a920a3d1"
+  },
+  {
+    "path": "FUNCTION_INVENTORY.md",
+    "bytes": 4782,
+    "sha256": "01c9a8492d039ea2705162b6689203eea1fe0a1e448eb299f4c04994162a4a44"
+  },
+  {
+    "path": "REA_REPORT.md",
+    "bytes": 9190,
+    "sha256": "57f46892689fc8103dad772b4e80bddd92e7ca47a589b5a079781dea61879765"
+  },
+  {
+    "path": "tools/static_scan.py",
+    "bytes": 6099,
+    "sha256": "686ca540daf3f2c3ed53e54546dcf37d7a38d958560ff1e22a566cde0754b415"
+  },
+  {
+    "path": "tools/verify_evidence.py",
+    "bytes": 2609,
+    "sha256": "b835de6dd671898d00f13e8ae7315e9328e8e6145a35af9b1ef6c0836c0be954"
+  }
+]

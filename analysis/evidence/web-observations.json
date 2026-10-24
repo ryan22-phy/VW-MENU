@@ -1,0 +1,49 @@
+{
+  "observed_on_client_date": "2026-10-24",
+  "method": "web.run text reader, followed by read-only HTTP downloads",
+  "sample_execution": false,
+  "observations": [
+    {
+      "id": "WEB-01",
+      "url": "https://scriptblox.com/raw/Steal-An-Egg-Lumin-Hub-223771",
+      "result": "Initial direct reader open failed; following View Raw from the public listing succeeded.",
+      "reader_line_zero_based": 0,
+      "fact": "One expression fetches http://luminon.top/loader.lua and passes the returned string to loadstring, then calls the resulting function.",
+      "direct_body": "scriptblox-raw-direct.body",
+      "direct_body_sha256": "da0393d9129e697ede95a56103d2e30bc329c499ef9e9e87396c2af2b5752970"
+    },
+    {
+      "id": "WEB-02",
+      "url": "https://scriptblox.com/script/Steal-An-Egg-Lumin-Hub-223771",
+      "reader_lines_zero_based": [23, 51, 62, 65, 66, 90],
+      "fact": "Public listing identifies this entry as a key-system Steal An Egg script, links View Raw and publishes an extensive feature description.",
+      "scope": "Publisher/listing claims; no behavior, parameters, control types, event signatures or successful execution verified."
+    },
+    {
+      "id": "WEB-03",
+      "url": "https://www.luminon.top/",
+      "reader_lines_zero_based": [8, 10, 19, 28],
+      "fact": "Public home page shows the same loader URL, names Steal an Egg among supported games, and describes key and Lifetime access.",
+      "scope": "Public marketing description, not an observation of the protected program's behavior."
+    },
+    {
+      "id": "WEB-04",
+      "url": "https://luminon.top/loader.lua",
+      "fact": "Reader rejected content type application/octet-stream. A direct read-only HTTP request to the provided HTTP URL later saved the body successfully.",
+      "direct_body": "lumin-loader-direct.body",
+      "direct_body_sha256": "aecbc6c2561acd12bb37ca5692ff42c39b65e603d73c9019746d1d4611ebc402"
+    },
+    {
+      "id": "WEB-05",
+      "url": "https://www.luminon.top/assets/v2/lumin-ui.webp",
+      "fact": "Preview image link existed, but the web reader returned Cache miss.",
+      "scope": "No visual layout, tabs or component appearance from the original UI was observed."
+    }
+  ],
+  "limitations": [
+    "Reader line numbers describe normalized web text, not source HTML line numbers.",
+    "Reader indexing can be cached; byte identities are asserted only for direct downloaded bodies.",
+    "The original UI and protected payload were never launched.",
+    "No key, authentication, lifetime purchase, Discord, checkpoint or protection mechanism was invoked."
+  ]
+}

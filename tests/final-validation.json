@@ -1,0 +1,37 @@
+{
+  "timestamp_utc": "2026-10-24T14:15:34.658087Z",
+  "scope": "Local compilation, static evidence and isolated logic/adapters; not Roblox runtime",
+  "steps": [
+    {
+      "name": "build",
+      "exit_code": 0,
+      "output": "Built VW_MENU.lua and VW_MENU.rbxmx from 7 modules\n"
+    },
+    {
+      "name": "package",
+      "exit_code": 0,
+      "output": "Package integrity: PASS (7 modules, 1 bootstrap, local dependencies only)\n"
+    },
+    {
+      "name": "evidence",
+      "exit_code": 0,
+      "output": "{\"result\": \"passed\", \"checks\": [\"identity_and_HTTP_metadata:scriptblox-raw-direct.body\", \"identity_and_HTTP_metadata:lumin-loader-direct.body\", \"lexical_counts_and_all_retained_coordinates\"], \"runtime_original_executed\": false, \"VM_unpacked\": false, \"key_flow_invoked\": false}\n"
+    },
+    {
+      "name": "isolated_logic",
+      "exit_code": 0,
+      "output": "VW MENU � isolated logic tests\nRuntime: C:\\Users\\franc\\Documents\\Codex\\2026-10-24\\new-chat\\work\\luau-toolchain\\bin\\luau.exe (caller-supplied Luau CLI)\nEnvironment: local Instance/Folder/attribute/connection, tween and timer stubs.\nNot a Roblox Studio run. Rendering, input, scheduling, replication, device compatibility\nand actual memory usage were not validated. Expected protected errors are deliberate.\nFont uses an audited whitelist; other enum/property stubs do not validate all Roblox APIs.\nA previous generic Font stub accepted GothamSemibold, an invalid Roblox enum; regression added.\nNotification timers are guarded, not cancelled in the scheduler; closures live for at most 15s.\nNo original Lumin Hub code is loaded or executed.\nExit code: 0\n\nProtected error expected by test:\t[VW MENU] Cleanup failed: C:/Users/franc/Documents/Codex/2026-10-24/new-chat/work/test-runs/vw-menu-isolated-qif9tglo/isolated_runner.luau:581: Intentional cleanup failure used by Support.spec\nVW MENU support: 43 assertions passed.\nProtected error expected by test:\t[VW MENU] broken: C:/Users/franc/Documents/Codex/2026-10-24/new-chat/work/test-runs/vw-menu-isolated-qif9tglo/isolated_runner.luau:664: expected test error\nFeatureController: PASS\nVW MENU notifications: 14 assertions passed (isolated stubs).\n\n"
+    },
+    {
+      "name": "main_integration",
+      "exit_code": 0,
+      "output": "VW MENU � Main integration tests with explicit local adapters\nRuntime: C:\\Users\\franc\\Documents\\Codex\\2026-10-24\\new-chat\\work\\luau-toolchain\\bin\\luau.exe (caller-supplied official Luau CLI)\nReal modules: Main, FeatureRegistry, FeatureController, SettingsManager, CleanupManager.\nReplaced modules: UIController and NotificationManager; neither renders or processes input.\nEnvironment: local Instances, attributes, synchronous Destroying/BindableFunction and signals.\nConnection assertions cover adapter and Main ownership, not real Roblox event delivery.\nNot a Roblox Studio run; rendering, input, scheduling, replication, device compatibility\nand actual memory usage were not validated. No original Lumin Hub code was executed.\nExit code: 0\n\nVW MENU Main integration: 75 assertions passed (explicit adapters and local signal stubs).\n\n"
+    },
+    {
+      "name": "compile",
+      "exit_code": 0,
+      "output": "Compiled 2 KLOC into 105 KB bytecode (read 0.00s, parse 0.00s, compile 0.00s)\n"
+    }
+  ],
+  "result": "PASS"
+}

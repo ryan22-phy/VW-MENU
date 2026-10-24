@@ -1,0 +1,9 @@
+{
+  "id": "lumin-loader-http",
+  "requested_url": "http://luminon.top/loader.lua",
+  "retrieved_at_utc": "2026-10-24T13:58:36.9239694Z",
+  "method": "GET",
+  "executed": false,
+  "outcome": "request_failed",
+  "error": "Este host não é conhecido. (luminon.top:80)"
+}

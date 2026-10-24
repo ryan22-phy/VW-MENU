@@ -1,0 +1,11 @@
+{
+  "result": "passed",
+  "checks": [
+    "identity_and_HTTP_metadata:scriptblox-raw-direct.body",
+    "identity_and_HTTP_metadata:lumin-loader-direct.body",
+    "lexical_counts_and_all_retained_coordinates"
+  ],
+  "runtime_original_executed": false,
+  "VM_unpacked": false,
+  "key_flow_invoked": false
+}

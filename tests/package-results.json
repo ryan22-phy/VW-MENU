@@ -1,0 +1,54 @@
+{
+  "result": "PASS",
+  "sourceModules": 7,
+  "bootstrapScripts": 1,
+  "checks": [
+    "model-source equality",
+    "standalone-source equality",
+    "local module resolution",
+    "no remote/executor dependency in independent sources"
+  ],
+  "scope": "Packaging and source checks only; not a Roblox runtime test",
+  "files": {
+    "src\\CleanupManager.lua": {
+      "bytes": 2018,
+      "sha256": "6cc2d25748b9732c81368e7fc73d86936c016b5fc14f018834a71a5d7731bdd8"
+    },
+    "src\\SettingsManager.lua": {
+      "bytes": 3350,
+      "sha256": "74206b17661c3aa775f7ba4ca42a7953f500ca76f8eb6b0d455df61067ee5ad5"
+    },
+    "src\\NotificationManager.lua": {
+      "bytes": 5147,
+      "sha256": "233301d6fea166cef82dee8b73e33d6d9bc0c95ac7037ac35ba762238fb4c523"
+    },
+    "src\\UIController.lua": {
+      "bytes": 25960,
+      "sha256": "71438809215b17b566e31953351958be7848c813c2a27923c3112ebfdd576df3"
+    },
+    "src\\FeatureRegistry.lua": {
+      "bytes": 3530,
+      "sha256": "ed6fab901df83e30ce3a2d9d5d4aced4a3bcb91361d551840da9cf24f1c9c4fe"
+    },
+    "src\\FeatureController.lua": {
+      "bytes": 4421,
+      "sha256": "212a7e5fac46f439dc187c06486bee76f7df85551eac963db641458668f9d3a5"
+    },
+    "src\\Main.lua": {
+      "bytes": 5634,
+      "sha256": "4e5ec648dc3e24e536d35e23d3d0a542c90220bf26da38af0787805adeef1117"
+    },
+    "src\\Bootstrap.client.lua": {
+      "bytes": 287,
+      "sha256": "e70bbe589f96043bfd5fb073b50555d8e633bd66708186ef566d21e360e7c5be"
+    },
+    "VW_MENU.lua": {
+      "bytes": 52010,
+      "sha256": "c99a1345c67180a157883ca00e2bfc39d82ece14ee2e68a92637466b699f14fd"
+    },
+    "VW_MENU.rbxmx": {
+      "bytes": 53178,
+      "sha256": "8488814f1c4b23a53208a9c270f92059cff526455146b9d24b38cf7fe425852f"
+    }
+  }
+}

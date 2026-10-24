@@ -1,0 +1,88 @@
+{
+  "id": "scriptblox-raw-direct",
+  "requested_url": "https://scriptblox.com/raw/Steal-An-Egg-Lumin-Hub-223771",
+  "retrieved_at_utc": "2026-10-24T13:59:49.6254411Z",
+  "method": "GET",
+  "executed": false,
+  "mode": "read_only_download_for_static_analysis",
+  "status": 200,
+  "final_url": null,
+  "headers": {
+    "Date": [
+      "Sat, 24 Oct 2026 13:59:46 GMT"
+    ],
+    "Transfer-Encoding": [
+      "chunked"
+    ],
+    "Connection": [
+      "keep-alive"
+    ],
+    "Server": [
+      "cloudflare"
+    ],
+    "Referrer-Policy": [
+      "same-origin"
+    ],
+    "Strict-Transport-Security": [
+      "max-age=15552000; includeSubDomains; preload"
+    ],
+    "X-Content-Type-Options": [
+      "nosniff"
+    ],
+    "x-download-options": [
+      "noopen"
+    ],
+    "X-Frame-Options": [
+      "SAMEORIGIN"
+    ],
+    "x-permitted-cross-domain-policies": [
+      "none"
+    ],
+    "X-XSS-Protection": [
+      "1; mode=block"
+    ],
+    "x-robots-tag": [
+      "noindex, nofollow"
+    ],
+    "Access-Control-Allow-Origin": [
+      "*"
+    ],
+    "Cache-Control": [
+      "public, max-age=7200, s-maxage=7200"
+    ],
+    "Content-Security-Policy": [
+      "sandbox; default-src 'none'; style-src 'unsafe-inline'"
+    ],
+    "cf-cache-status": [
+      "DYNAMIC"
+    ],
+    "Expect-CT": [
+      "max-age=86400, enforce"
+    ],
+    "Speculation-Rules": [
+      "\"/cdn-cgi/speculation\""
+    ],
+    "Server-Timing": [
+      "cfCacheStatus;desc=\"DYNAMIC\"",
+      "cfEdge;dur=10,cfOrigin;dur=187"
+    ],
+    "Report-To": [
+      "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=d4%2B1ZfxVRsirNxQM2UAeG1kRPpl6PyVnHREunocCE8E2iI6c%2BqcAxJCjBKsH7H4nYGIEPQYzMKDf9joZHmpP2T7PAzQoEWser%2FTJP%2Fq7FlgrDFazu4GH%2FRdmt%2F7MGGB5\"}]}"
+    ],
+    "Nel": [
+      "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+    ],
+    "CF-RAY": [
+      "a4f981004db64b41-GRU"
+    ],
+    "Alt-Svc": [
+      "h3=\":443\""
+    ],
+    "Content-Type": [
+      "text/plain"
+    ]
+  },
+  "bytes": 59,
+  "sha256": "da0393d9129e697ede95a56103d2e30bc329c499ef9e9e87396c2af2b5752970",
+  "outcome": "body_saved_as_data"
+}

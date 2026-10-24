@@ -1,0 +1,70 @@
+{
+  "id": "lumin-loader-direct",
+  "requested_url": "http://luminon.top/loader.lua",
+  "retrieved_at_utc": "2026-10-24T13:59:50.1409264Z",
+  "method": "GET",
+  "executed": false,
+  "mode": "read_only_download_for_static_analysis",
+  "status": 200,
+  "final_url": null,
+  "headers": {
+    "Date": [
+      "Sat, 24 Oct 2026 13:59:46 GMT"
+    ],
+    "Connection": [
+      "keep-alive"
+    ],
+    "ETag": [
+      "\"47364-6ad64022-3f3ab;br\""
+    ],
+    "Accept-Ranges": [
+      "bytes"
+    ],
+    "Vary": [
+      "Accept-Encoding"
+    ],
+    "Server": [
+      "cloudflare"
+    ],
+    "x-turbo-charged-by": [
+      "LiteSpeed"
+    ],
+    "Age": [
+      "4220"
+    ],
+    "Cache-Control": [
+      "max-age=14400"
+    ],
+    "cf-cache-status": [
+      "HIT"
+    ],
+    "Nel": [
+      "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+    ],
+    "Speculation-Rules": [
+      "\"/cdn-cgi/speculation\""
+    ],
+    "Server-Timing": [
+      "cfCacheStatus;desc=\"HIT\"",
+      "cfEdge;dur=14,cfOrigin;dur=0"
+    ],
+    "Report-To": [
+      "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=78aSH9T6Cs1veIffw6QhkPpWtE0VjfotdVyS7U9CGZgeqdh7sxtpEi7nflBrZ75lIfu1fZusEj4GC6wNMRww%2BkAqgha%2FS3lzq7jAWafIfNiMhGn7wl8Nwl0X2bf4og%3D%3D\"}]}"
+    ],
+    "CF-RAY": [
+      "a4f98102daab622e-GRU"
+    ],
+    "Alt-Svc": [
+      "h3=\":443\""
+    ],
+    "Content-Type": [
+      "application/octet-stream"
+    ],
+    "Last-Modified": [
+      "Mon, 19 Oct 2026 16:06:58 GMT"
+    ]
+  },
+  "bytes": 291684,
+  "sha256": "aecbc6c2561acd12bb37ca5692ff42c39b65e603d73c9019746d1d4611ebc402",
+  "outcome": "body_saved_as_data"
+}
