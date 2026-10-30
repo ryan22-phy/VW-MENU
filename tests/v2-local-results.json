@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-30",
+  "environment": "Luau CLI local; sem Roblox Studio ou renderização",
+  "deterministicBuild": true,
+  "compiledFiles": 12,
+  "passedTests": 17,
+  "bundleBytes": 66563,
+  "bundleSHA256": "d4fa1b86f608cfb04d1225727f03064bd709389b6d6b08c759cd3467cf56135d",
+  "suites": [
+    {
+      "file": "tests/core.spec.luau",
+      "passed": 10,
+      "output": "PASS defaults e limites dos sliders\r\nPASS rejeita NaN, infinito, tipos e opções inválidos sem alterar estado\r\nPASS hex normalizado e reset não compartilha estado entre instâncias\r\nPASS observadores notificam mudanças, desconectam e não recebem duplicatas\r\n[VW MENU] Cleanup: ./tests/core.spec.luau:65: falha esperada de teardown\r\nPASS cleanup é idempotente, libera escopos e continua após falha\r\nPASS substituição de escopo descarta a geração antiga\r\nPASS suavização tem o mesmo resultado em 30, 60 e 144 FPS\r\nPASS FOV inclui a borda e rejeita fora da tela ou atrás da câmera\r\nPASS neutros não viram aliados só por compartilhar TeamColor\r\nPASS seleção Head não faz fallback silencioso para Root quando Head está ausente\r\n10 testes locais passaram; isto não é um playtest Roblox.\r\n"
+    },
+    {
+      "file": "tests/controllers.spec.luau",
+      "passed": 7,
+      "output": "PASS tracker ignora Highlight e outros filhos que não mudam suas referências\r\nPASS tracker troca gerações, ignora remoção antiga e libera conexões de respawn\r\nPASS tracker aceita partes atrasadas e invalida morto ou streamed out\r\nPASS aim escolhe o mais próximo do centro e ignora mortos e aliados\r\nPASS target lock conserva alvo elegível e readquire ao sair do FOV\r\nPASS wall check rejeita obstáculo e reutiliza o mesmo RaycastParams\r\nPASS ESP aplica master, aliados e precedência das cores reais\r\n7 testes de controladores passaram com doubles de API; sem runtime Roblox.\r\n"
+    }
+  ],
+  "compileOutput": [
+    {
+      "file": "src/v2/aim.lua",
+      "output": "Compiled 0 KLOC into 9 KB bytecode (read 0.00s, parse 0.00s, compile 0.00s)"
+    },
+    {
+      "file": "src/v2/cleanup.lua",
+      "output": "Compiled 0 KLOC into 2 KB bytecode (read 0.00s, parse 0.00s, compile 0.00s)"
+    },
+    {
+      "file": "src/v2/config.lua",
+      "output": "Compiled 0 KLOC into 3 KB bytecode (read 0.00s, parse 0.00s, compile 0.00s)"
+    },
+    {
+      "file": "src/v2/esp.lua",
+      "output": "Compiled 0 KLOC into 8 KB bytecode (read 0.00s, parse 0.00s, compile 0.00s)"
+    },
+    {
+      "file": "src/v2/main.lua",
+      "output": "Compiled 0 KLOC into 10 KB bytecode (read 0.00s, parse 0.00s, compile 0.00s)"
+    },
+    {
+      "file": "src/v2/tracker.lua",
+      "output": "Compiled 0 KLOC into 4 KB bytecode (read 0.00s, parse 0.00s, compile 0.00s)"
+    },
+    {
+      "file": "src/v2/ui.lua",
+      "output": "Compiled 0 KLOC into 30 KB bytecode (read 0.00s, parse 0.00s, compile 0.00s)"
+    },
+    {
+      "file": "dist/VW-MENU.lua",
+      "output": "Compiled 1 KLOC into 67 KB bytecode (read 0.02s, parse 0.00s, compile 0.00s)"
+    },
+    {
+      "file": "loader.lua",
+      "output": "Compiled 0 KLOC into 0 KB bytecode (read 0.00s, parse 0.00s, compile 0.00s)"
+    },
+    {
+      "file": "tests/core.spec.luau",
+      "output": "Compiled 0 KLOC into 6 KB bytecode (read 0.00s, parse 0.00s, compile 0.00s)"
+    },
+    {
+      "file": "tests/controllers.spec.luau",
+      "output": "Compiled 0 KLOC into 9 KB bytecode (read 0.00s, parse 0.00s, compile 0.00s)"
+    },
+    {
+      "file": "tests/signal.luau",
+      "output": "Compiled 0 KLOC into 0 KB bytecode (read 0.00s, parse 0.00s, compile 0.00s)"
+    }
+  ],
+  "notExecuted": [
+    "Ctrl/mouse/touch e renderização",
+    "Controladores completos no engine",
+    "Paredes reais e multiplayer",
+    "Respawn real R6/R15 e streaming",
+    "Reexecução via BindableFunction no engine",
+    "FPS e console Roblox"
+  ]
+}
