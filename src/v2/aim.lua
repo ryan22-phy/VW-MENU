@@ -77,8 +77,17 @@ function AimController.new(context)
     cleanup:Add(s.UserInputService.InputBegan:Connect(function(input, processed)
         if input.UserInputType == Enum.UserInputType.MouseButton2 and not processed
             and not s.UserInputService:GetFocusedTextBox() and context.Config:Get("AimEnabled") then
-            self.Holding = true
-            self:_syncBinding()
+            local aimMode = context.Config:Get("AimMode") or "Hold"
+            if aimMode == "Hold" then
+                self.Holding = true
+                self:_syncBinding()
+            elseif aimMode == "Toggle" then
+                self.Holding = not self.Holding
+                self:_syncBinding()
+            elseif aimMode == "HoldUntilTarget" then
+                self.Holding = true
+                self:_syncBinding()
+            end
         end
     end))
     cleanup:Add(s.UserInputService.InputEnded:Connect(function(input)
@@ -132,8 +141,29 @@ end
 function AimController:_canAim()
     local context, s = self.Context, self.Context.Services
     local camera = s.Workspace.CurrentCamera
-    return not self.Dead and self.Holding and context.Config:Get("AimEnabled")
-        and camera ~= nil and camera.CameraType ~= Enum.CameraType.Scriptable
+    local aimEnabled = context.Config:Get("AimEnabled")
+    if not aimEnabled then return false end
+
+    local aimMode = context.Config:Get("AimMode") or "Hold"
+
+    local canAim = false
+    if aimMode == "Hold" then
+        canAim = self.Holding
+    elseif aimMode == "Toggle" then
+        -- In Toggle mode, Holding represents the toggled state
+        canAim = self.Holding
+    elseif aimMode == "HoldUntilTarget" then
+        canAim = self.Holding or (self.Target and self:_candidate(self.Target, camera) ~= nil)
+    else
+        canAim = self.Holding
+    end
+
+    if not canAim then
+        self.Target = nil
+        return false
+    end
+
+    return camera ~= nil and camera.CameraType ~= Enum.CameraType.Scriptable
         and not s.VRService.VREnabled and not s.UserInputService:GetFocusedTextBox()
         and context.Tracker:IsAlive(context.Tracker.Records[s.Players.LocalPlayer])
 end

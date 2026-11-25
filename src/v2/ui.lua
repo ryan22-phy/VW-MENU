@@ -552,4 +552,36 @@ function UIController:AddStatus(tabId, config)
 	return function(text) if status.Text ~= text then status.Text = text end end
 end
 
+function UIController:AddColorInput(tabId, config)
+	local row = self:_row(tabId, config, 66, 152)
+	local swatch = make("Frame", {Name = "Swatch", BorderSizePixel = 0,
+		Size = UDim2.fromOffset(18, 28), Position = UDim2.new(1, -141, 0, 19)}, row)
+	corner(swatch, 4)
+	local box = make("TextBox", {Name = "Hex", ClearTextOnFocus = false,
+		BackgroundColor3 = C.Secondary, BorderSizePixel = 0, TextColor3 = C.Text,
+		Font = Enum.Font.GothamMedium, TextSize = 12, Size = UDim2.fromOffset(108, 32),
+		Position = UDim2.new(1, -117, 0, 17), PlaceholderText = "#RRGGBB"}, row)
+	corner(box)
+	local value = config.Value
+	local handle = {Instance = row}
+	function handle.Get() return value end
+	function handle.Set(first, second, third)
+		local nextValue, fireCallback = first, second
+		if first == handle then nextValue, fireCallback = second, third end
+		if type(nextValue) ~= "string" or not nextValue:match("^#%x%x%x%x%x%x$") then
+			box.Text = value
+			return
+		end
+		local previous = value
+		value = string.upper(nextValue)
+		box.Text, swatch.BackgroundColor3 = value, Color3.fromHex(value)
+		if fireCallback and previous ~= value then self:_invoke(config.OnChanged, value) end
+	end
+	self:_connect(box.FocusLost, function() handle.Set(box.Text, true) end)
+	handle.Set(value)
+	self.Controls[config.Id] = handle
+	return handle
+end
+
 return UIController
+

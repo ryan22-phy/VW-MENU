@@ -27,6 +27,51 @@ function PlayerTracker:IsTeammate(player)
     return PlayerTracker.sameTeam(self.Services.Players.LocalPlayer, player)
 end
 
+function PlayerTracker:AddTag(player, tag)
+    local record = self.Records[player]
+    if not record then return false end
+    record.Tags = record.Tags or {}
+    record.Tags[tag] = true
+    return true
+end
+
+function PlayerTracker:HasTag(player, tag)
+    local record = self.Records[player]
+    if not record or not record.Tags then return false end
+    return record.Tags[tag] == true
+end
+
+function PlayerTracker:GetPlayersByTag(tag)
+    local result = {}
+    for player, record in pairs(self.Records) do
+        if record.Tags and record.Tags[tag] then
+            table.insert(result, player)
+        end
+    end
+    return result
+end
+
+function PlayerTracker:GetNearestAlive(center, maxDistance)
+    local nearest, distance = nil, math.huge
+    for player, record in pairs(self.Records) do
+        if self:IsAlive(record) and record.Root then
+            local d = (record.Root.Position - center).Magnitude
+            if d < distance and (not maxDistance or d <= maxDistance) then
+                nearest, distance = record, d
+            end
+        end
+    end
+    return nearest
+end
+
+function PlayerTracker:GetLocalPlayerRecord()
+    return self.Records[self.Services.Players.LocalPlayer]
+end
+
+function PlayerTracker:GetAllRecords()
+    return self.Records
+end
+
 function PlayerTracker:IsAlive(record)
     return record ~= nil and record.Character ~= nil
         and record.Character:IsDescendantOf(self.Services.Workspace)

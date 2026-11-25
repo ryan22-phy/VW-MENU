@@ -7,6 +7,8 @@ function Cleanup.new(root)
     local self = setmetatable({Items = {}, NextId = 0, Dead = false}, Cleanup)
     self.Root = root or self
     if not root then self.Connections = 0 end
+    self.TotalAdded = 0
+    self._deadline = nil
     return self
 end
 
@@ -36,6 +38,67 @@ function Cleanup:Add(resource)
     else
         self.NextId += 1
         self.Items[self.NextId] = entry
+        self.TotalAdded += 1
+    end
+    return resource
+end
+
+function Cleanup:AddTimed(resource, ttl, label)
+    if not ttl or ttl <= 0 then return self:Add(resource) end
+    local id = self.NextId + 1
+    self.NextId = id
+    local entry = {
+        Dispose = function()
+            if entry.DisposeFunc then
+                local ok, err = pcall(entry.DisposeFunc)
+                if not ok then
+                    if entry.OnError then pcall(entry.OnError, err) end
+                end
+            end
+        end,
+        Connection = false,
+        Label = label or "TimedResource_" .. id
+    }
+    self.Items[id] = entry
+    self.TotalAdded += 1
+
+    if entry.Dispose then
+        entry.DisposeFunc = entry.Dispose
+    end
+
+    return resource
+end
+
+function Cleanup:AddWithHandler(resource, onDisposeError)
+    local id = self.NextId + 1
+    self.NextId = id
+    local originalDispose
+    local kind = typeof(resource)
+    if kind == "RBXScriptConnection" then
+        originalDispose = function() resource:Disconnect() end
+    elseif kind == "Instance" then
+        originalDispose = function() resource:Destroy() end
+    elseif type(resource) == "function" then
+        originalDispose = resource
+    elseif type(resource) == "table" and type(resource.Destroy) == "function" then
+        originalDispose = function() resource:Destroy() end
+    else error("Cleanup: recurso sem descarregamento", 2) end
+
+    local entry = {
+        Dispose = function()
+            local ok, err = pcall(originalDispose)
+            if not ok and onDisposeError then
+                pcall(onDisposeError, err)
+            end
+        end,
+        Connection = kind == "RBXScriptConnection" or (type(resource) == "table" and type(resource.Disconnect) == "function")
+    }
+    if entry.Connection then self.Root.Connections += 1 end
+
+    if self.Dead then self:_dispose(entry)
+    else
+        self.Items[id] = entry
+        self.TotalAdded += 1
     end
     return resource
 end
@@ -56,8 +119,40 @@ function Cleanup:Scope(key)
     return child
 end
 
+function Cleanup:ScopeTimed(key, ttl)
+    assert(not self.Dead, "Cleanup já descarregado")
+    self:Remove(key)
+    local child = Cleanup.new(self.Root)
+    if ttl and ttl > 0 then
+        task.delay(ttl, function()
+            if child and not child.Dead then
+                child:Destroy()
+            end
+        end)
+    end
+    child.Parent, child.ParentKey = self, key
+    self.Items[key] = {Dispose = function() child:Destroy() end}
+    return child
+end
+
 function Cleanup:ConnectionCount()
     return self.Root.Connections
+end
+
+function Cleanup:GetMetrics()
+    local count = 0
+    local connections = 0
+    for _, entry in pairs(self.Items) do
+        count += 1
+        if entry.Connection then connections += 1 end
+    end
+    return {
+        TotalItems = count,
+        TotalConnections = connections,
+        RootConnections = self.Root.Connections,
+        TotalAdded = self.TotalAdded,
+        IsDead = self.Dead
+    }
 end
 
 function Cleanup:Destroy()

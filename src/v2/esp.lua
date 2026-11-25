@@ -7,13 +7,26 @@ local keys = {
     FriendColor = true, EnemyColor = true, HighlightTransparency = true,
     NameColor = true, BoxColor = true, HighlightColor = true,
     NameColorMode = true, BoxColorMode = true, HighlightColorMode = true,
+    HighlightTransparencyMode = true,
 }
 
 function ESPController.new(context)
     local self = setmetatable({Context = context, Overlays = {}, Count = 0, Running = false, Elapsed = 0}, ESPController)
     context.Cleanup:Add(function() table.clear(self.Overlays); self.Count = 0 end)
     context.Cleanup:Add(context.Config:Subscribe(function(key)
-        if keys[key] or key == "Reset" then self:_palette(); self:_refreshAll() end
+        if keys[key] or key == "Reset" then
+            self:_palette()
+            if key == "HighlightTransparencyMode" then
+                -- Reapply transparency with new mode
+                for record, overlay in pairs(self.Overlays) do
+                    if overlay.Highlight then
+                        overlay.Highlight.FillTransparency = self:_getHighlightTransparency(record)
+                    end
+                end
+            else
+                self:_refreshAll()
+            end
+        end
     end))
     context.Cleanup:Add(context.Tracker:Subscribe(function(record, reason)
         if reason == "removed" then self:_remove(record)
@@ -94,7 +107,8 @@ function ESPController:_refresh(record)
         highlight.Adornee = record.Character
         highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
         highlight.FillColor, highlight.OutlineColor = self:_color(record, "Highlight"), self:_color(record, "Highlight")
-        highlight.FillTransparency, highlight.OutlineTransparency = config:Get("HighlightTransparency"), 0.1
+        highlight.FillTransparency = self:_getHighlightTransparency(record)
+        highlight.OutlineTransparency = 0.1
     end
     local box = self:_component(overlay, "Box", config:Get("Boxes"), "BoxHandleAdornment", overlay.Folder)
     if box then
@@ -156,7 +170,29 @@ function ESPController:_update(record, overlay, origin)
     end
 end
 
-function ESPController:_refreshAll()
+function ESPController:_getHighlightTransparency(record)
+    local mode = self.Context.Config:Get("HighlightTransparencyMode") or "Fixed"
+
+    if mode == "Fixed" then
+        return self.Context.Config:Get("HighlightTransparency")
+    elseif mode == "Distance" then
+        local origin = self:_origin()
+        if record.Root then
+            local dist = (record.Root.Position - origin).Magnitude
+            return math.clamp(0.1 + (dist / 100) * 0.5, 0, 0.8)
+        end
+        return 0.65
+    elseif mode == "Health" then
+        if record.Humanoid then
+            return 0.3 + (1 - record.Humanoid.Health / record.Humanoid.MaxHealth) * 0.4
+        end
+        return 0.65
+    end
+
+    return self.Context.Config:Get("HighlightTransparency")
+end
+
+function ESPController::_refreshAll()
     for _, record in pairs(self.Context.Tracker.Records) do self:_refresh(record) end
     self:_syncHeartbeat()
 end
